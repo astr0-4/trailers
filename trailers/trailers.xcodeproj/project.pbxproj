@@ -17,6 +17,12 @@
 		FABFEA281D27190C0019FE84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABFEA261D27190C0019FE84 /* LaunchScreen.storyboard */; };
 		FABFEA331D27190D0019FE84 /* trailersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFEA321D27190D0019FE84 /* trailersTests.swift */; };
 		FABFEA3E1D27190D0019FE84 /* trailersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFEA3D1D27190D0019FE84 /* trailersUITests.swift */; };
+		FABFEA4D1D27212D0019FE84 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFEA4B1D27212D0019FE84 /* MovieCell.swift */; };
+		FABFEA4E1D27212D0019FE84 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABFEA4C1D27212D0019FE84 /* MovieCell.xib */; };
+		FACAE4201D27233400F9174A /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACAE41F1D27233400F9174A /* MovieDataSource.swift */; };
+		FACAE4221D27286E00F9174A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACAE4211D27286E00F9174A /* Client.swift */; };
+		FACAE4261D2732BD00F9174A /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = FACAE4251D2732BD00F9174A /* test.plist */; };
+		FACAE4281D27389800F9174A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACAE4271D27389800F9174A /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		FABFEA391D27190D0019FE84 /* trailersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trailersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABFEA3D1D27190D0019FE84 /* trailersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trailersUITests.swift; sourceTree = "<group>"; };
 		FABFEA3F1D27190D0019FE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABFEA4B1D27212D0019FE84 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		FABFEA4C1D27212D0019FE84 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		FACAE41F1D27233400F9174A /* MovieDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
+		FACAE4211D27286E00F9174A /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		FACAE4251D2732BD00F9174A /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = test.plist; path = ../test.plist; sourceTree = "<group>"; };
+		FACAE4271D27389800F9174A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,11 +150,16 @@
 			isa = PBXGroup;
 			children = (
 				FABFEA1D1D27190C0019FE84 /* AppDelegate.swift */,
+				FACAE4271D27389800F9174A /* LocationManager.swift */,
 				FABFEA1F1D27190C0019FE84 /* ViewController.swift */,
+				FACAE4211D27286E00F9174A /* Client.swift */,
+				FACAE41D1D2722C500F9174A /* Cells */,
+				FACAE41E1D27230B00F9174A /* Data Sources */,
 				FABFEA211D27190C0019FE84 /* Main.storyboard */,
 				FABFEA241D27190C0019FE84 /* Assets.xcassets */,
 				FABFEA261D27190C0019FE84 /* LaunchScreen.storyboard */,
 				FABFEA291D27190C0019FE84 /* Info.plist */,
+				FACAE4251D2732BD00F9174A /* test.plist */,
 			);
 			path = trailers;
 			sourceTree = "<group>";
@@ -163,6 +180,23 @@
 				FABFEA3F1D27190D0019FE84 /* Info.plist */,
 			);
 			path = trailersUITests;
+			sourceTree = "<group>";
+		};
+		FACAE41D1D2722C500F9174A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FABFEA4B1D27212D0019FE84 /* MovieCell.swift */,
+				FABFEA4C1D27212D0019FE84 /* MovieCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		FACAE41E1D27230B00F9174A /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FACAE41F1D27233400F9174A /* MovieDataSource.swift */,
+			);
+			name = "Data Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +313,8 @@
 			files = (
 				FABFEA281D27190C0019FE84 /* LaunchScreen.storyboard in Resources */,
 				FABFEA251D27190C0019FE84 /* Assets.xcassets in Resources */,
+				FABFEA4E1D27212D0019FE84 /* MovieCell.xib in Resources */,
+				FACAE4261D2732BD00F9174A /* test.plist in Resources */,
 				FABFEA231D27190C0019FE84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +465,10 @@
 			files = (
 				FABFEA201D27190C0019FE84 /* ViewController.swift in Sources */,
 				FABFEA1E1D27190C0019FE84 /* AppDelegate.swift in Sources */,
+				FACAE4281D27389800F9174A /* LocationManager.swift in Sources */,
+				FABFEA4D1D27212D0019FE84 /* MovieCell.swift in Sources */,
+				FACAE4221D27286E00F9174A /* Client.swift in Sources */,
+				FACAE4201D27233400F9174A /* MovieDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

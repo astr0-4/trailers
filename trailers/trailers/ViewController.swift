@@ -1,25 +1,18 @@
-//
-//  ViewController.swift
-//  trailers
-//
-//  Created by Alex on 2016-07-01.
-//  Copyright © 2016 Alex Stroulger. All rights reserved.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate
+{
+	let dataSource = MovieDataSource()
+	@IBOutlet weak var moviesCollectionView: UICollectionView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+	override func viewDidLoad()
+	{
+		super.viewDidLoad()
+		moviesCollectionView.dataSource = dataSource
+        let client = Client()
+        client.requestNearbyTheaters()
+	}
 
 }
 
