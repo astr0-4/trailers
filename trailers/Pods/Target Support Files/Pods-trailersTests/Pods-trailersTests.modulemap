@@ -1,0 +1,6 @@
+framework module Pods_trailersTests {
+  umbrella header "Pods-trailersTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
